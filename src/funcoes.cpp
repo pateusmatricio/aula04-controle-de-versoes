@@ -18,7 +18,7 @@ void numerosRepetidos(int * numeros){
 				repetido++;
 			}
 		}
-		numerosUsandos[k] = numeros[i];
+		numerosUsados[k] = numeros[i];
 		k++;
 		
 		for(j = 0; j < 10; j++){

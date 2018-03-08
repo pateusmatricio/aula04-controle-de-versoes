@@ -10,7 +10,7 @@ aula04: $(aula04)
 
 $(aula04): parametrocpp += -I./include/
 $(aula04): $(objetos)
-	$(CC) -c $(parametrocpp) $	-o $@
+	$(CC) $^ $(parametrocpp) -o $@
 
 ./build/aula04.o: ./src/aula04.cpp ./include/funcoes.h
 	$(CC) -c $(parametrocpp) $<	-o $@
