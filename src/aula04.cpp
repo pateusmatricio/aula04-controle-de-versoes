@@ -7,7 +7,7 @@ using std::endl;
 
 int main(){
 
-	int i;
+	int i, valor;
 	float sal, desp;
 	int * numeros = new int[10];
 
@@ -21,6 +21,9 @@ int main(){
 		cin >> numeros[i];
 	}
 	numerosRepetidos(numeros);
+	cout << "Digite um valor em reais" << endl;
+	cin >> valor;
+	notas(valor);
 
 	return 0;
 }

@@ -6,4 +6,6 @@ float milionario(float salario, float despesas);
 
 void numerosRepetidos(int * numeros);
 
+void notas(int valor);
+
 #endif
