@@ -5,6 +5,8 @@ using std::endl;
 
 #include "funcoes.h"
 
+#include "mergeSort.h"
+
 int main(){
 
 	int i, valor;
@@ -17,9 +19,12 @@ int main(){
 	cin >> desp;
 	cout << "você ficaria milionario em " << milionario(sal,desp) << " anos poupando desse jeito!!" << endl;
 	cout << "digite 10 numeros:" << endl;
+
 	for(i = 0; i < 10; i++){
 		cin >> numeros[i];
 	}
+
+	mergeSort(numeros, 10);
 	numerosRepetidos(numeros);
 	cout << "Digite um valor em reais" << endl;
 	cin >> valor;

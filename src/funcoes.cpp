@@ -8,27 +8,8 @@ float milionario(float salario, float despesas){
 	return 1000000/((salario-despesas)*12);
 }
 
-void numerosRepetidos(int * numeros){
-	int i, j, repetido = 1, k = 0;
-	int numerosUsados[10];
-
-	for(i = 0; i < 10; i++){
-		numerosUsados[i] = 1;
-	}
+void numerosRepetidos(int *numeros){
 	
-	for(i = 0; i < 10; i++){
-		for(j = 0; j < 10; j++){
-			if(numeros[i] == numeros[j] && j != i){
-				numerosUsados[i] += 1;
-			} else {
-				numerosUsados[j] = 0;
-			}
-		}
-	}
-
-	for(i = 0; i < 10; i++) {
-		cout << numeros[i] << " aconteceu " << numerosUsados[i] << " vezes." << endl;
-	}
 }
 
 void notas(int valor){

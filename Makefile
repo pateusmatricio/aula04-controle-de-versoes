@@ -4,7 +4,7 @@ CC = g++
 
 parametrocpp = -Wall -pedantic -ansi -std=c++11
 
-objetos = ./build/aula04.o ./build/funcoes.o
+objetos = ./build/aula04.o ./build/funcoes.o ./build/mergeSort.o
 
 aula04: $(aula04)
 
@@ -17,6 +17,9 @@ $(aula04): $(objetos)
 
 ./build/funcoes.o: ./src/funcoes.cpp ./include/funcoes.h
 	$(CC) -c $(parametrocpp) $<	-o $@
+
+./build/mergeSort.o: ./src/mergeSort.cpp ./include/mergeSort.h
+	$(CC) -c $(parametrocpp) $< -o $@
 
 dir:
 	mkdir -p bin
