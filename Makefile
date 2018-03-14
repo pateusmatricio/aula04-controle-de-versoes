@@ -8,18 +8,18 @@ objetos = ./build/aula04.o ./build/funcoes.o ./build/mergeSort.o
 
 aula04: $(aula04)
 
-$(aula04): parametrocpp += -I./include/
+$(aula04): parametrocpp += -I. -I./include/
 $(aula04): $(objetos)
 	$(CC) $^ $(parametrocpp) -o $@
+
+./build/mergeSort.o: ./src/mergeSort.cpp ./include/mergeSort.h
+	$(CC) -c $(parametrocpp) $< -o $@
 
 ./build/aula04.o: ./src/aula04.cpp ./include/funcoes.h
 	$(CC) -c $(parametrocpp) $<	-o $@
 
 ./build/funcoes.o: ./src/funcoes.cpp ./include/funcoes.h
 	$(CC) -c $(parametrocpp) $<	-o $@
-
-./build/mergeSort.o: ./src/mergeSort.cpp ./include/mergeSort.h
-	$(CC) -c $(parametrocpp) $< -o $@
 
 dir:
 	mkdir -p bin

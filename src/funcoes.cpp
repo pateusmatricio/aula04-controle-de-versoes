@@ -8,8 +8,25 @@ float milionario(float salario, float despesas){
 	return 1000000/((salario-despesas)*12);
 }
 
-void numerosRepetidos(int *numeros){
+vector<int> numerosRepetidos(int *numeros){
+	int repeticoes = 1, numeroAtual = numeros[0];
+	vector<int> v;
+
+	for (int i = 1; i < 10; i++) {
+		if (numeroAtual == numeros[i]) {
+			repeticoes += 1;
+		} else {
+			v.push_back(numeroAtual);
+			v.push_back(repeticoes);
+			numeroAtual = numeros[i];
+			repeticoes = 1;
+		}
+	}
 	
+	v.push_back(numeroAtual);
+	v.push_back(repeticoes);
+
+	return v;
 }
 
 void notas(int valor){
