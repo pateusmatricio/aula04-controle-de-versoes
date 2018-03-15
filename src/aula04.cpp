@@ -1,3 +1,13 @@
+/**
+@file 	aula04.cpp
+@brief 	Programa relativo à ativade da aula 04 de Linguagem de Programação I
+@author Ariel de Oliveira Correa e Mateus Patricio de Souza Santos
+@since	06/03/2018
+@date	15/03/2018
+@sa
+*/
+
+
 #include <iostream>
 using std::cin;
 using std::cout;
@@ -35,7 +45,6 @@ int main(){
 	cout << v.size() << endl;
 
 	for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++) {
-		cout << "entrei" << endl;
 		cout << "O número " << *it << " repetiu ";
 		++it;
 		cout << *it << " vezes" << endl;
